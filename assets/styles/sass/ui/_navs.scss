@@ -1,0 +1,39 @@
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * NAV PRIMARY
+ * NAV MOBILE
+*/
+
+
+
+
+
+/*------------------------------------*\
+    $NAV PRIMARY
+\*------------------------------------*/
+.primary {
+  ul {
+    padding: 0;
+    line-height: $brand-line-height;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+}
+
+.nav--left {
+  float: left;
+}
+
+.nav--right {
+  float: right;
+}
+
+
+/*------------------------------------*\
+    $NAV MOBILE
+\*------------------------------------*/

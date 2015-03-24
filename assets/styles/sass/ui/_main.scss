@@ -1,0 +1,63 @@
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * RESET
+*/
+
+
+
+
+
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+
+html, body,
+h1, h2, h3, h4, h5, h6,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/*------------------------------------*\
+    $COLUMN
+\*------------------------------------*/
+
+body {
+  max-width: 900px;
+  margin: 0 auto;
+  margin: 20px;
+}
+
+
+
+/*------------------------------------*\
+    $FLEXBOX
+\*------------------------------------*/
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex-item-center {
+  text-align: center;
+}
+
+/*------------------------------------*\
+    $CLEARFIX
+\*------------------------------------*/
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}

@@ -1,0 +1,11 @@
+<div class="container">
+  {{#if user}}
+    <h1>Hello, {{user.firstname}}</h1>
+  {{else}}
+    <form method="post" action="/login">
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <input type="submit" Value="Submit">
+    </form>
+  {{/if}}
+</div>

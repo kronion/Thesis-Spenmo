@@ -1,0 +1,28 @@
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+/**
+ * LOGO
+*/
+
+
+
+
+
+/*------------------------------------*\
+    $LOGO
+\*------------------------------------*/
+
+header {
+  margin-bottom: 30px;
+}
+
+.brand {
+  float: left;
+  color: $brand-color;
+
+  > h1 {
+    font-size: $brand-line-height;
+    line-height: $brand-line-height;
+  }
+}
