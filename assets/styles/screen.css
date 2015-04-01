@@ -107,21 +107,20 @@ ul {
 /* line 29, sass/ui/_main.scss */
 body {
   max-width: 900px;
-  margin: 0 auto;
-  margin: 20px;
+  margin: 20px auto;
 }
 
 /*------------------------------------*\
     $FLEXBOX
 \*------------------------------------*/
-/* line 41, sass/ui/_main.scss */
+/* line 40, sass/ui/_main.scss */
 .flex-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-/* line 47, sass/ui/_main.scss */
+/* line 46, sass/ui/_main.scss */
 .flex-item-center {
   text-align: center;
 }
@@ -129,14 +128,14 @@ body {
 /*------------------------------------*\
     $CLEARFIX
 \*------------------------------------*/
-/* line 55, sass/ui/_main.scss */
+/* line 54, sass/ui/_main.scss */
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table;
 }
 
-/* line 61, sass/ui/_main.scss */
+/* line 60, sass/ui/_main.scss */
 .clearfix:after {
   clear: both;
 }

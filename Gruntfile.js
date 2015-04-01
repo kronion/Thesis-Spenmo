@@ -107,11 +107,7 @@ module.exports = function (grunt) {
             site: {
                 path: 'http://localhost:3000',
                 app: 'Google Chrome'
-            },
-            editor: {
-                path: './',
-                app: ''
-            },
+            }
         },
 
         // Rev Config
@@ -258,7 +254,6 @@ module.exports = function (grunt) {
         'sass:dev',
         'express:dev',
         'open:site',
-        'open:editor',
         'watch'
     ]);
 
@@ -268,7 +263,7 @@ module.exports = function (grunt) {
         'express:dev',
         'watch'
     ]);
-    
+
 
     // Build
     grunt.registerTask('build', 'Build production ready assets and views.', [

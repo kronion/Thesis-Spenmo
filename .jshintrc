@@ -7,7 +7,6 @@
     "eqeqeq": true,
     "eqnull": true,
     "immed": true,
-    "indent": 4,
     "latedef": true,
     "maxlen": 180,
     "maxstatements": 20,
@@ -17,6 +16,5 @@
     "trailing": true,
     "quotmark": "single",
     "undef": true,
-    "unused": true,
-    "white": true
+    "unused": true
 }

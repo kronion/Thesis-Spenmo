@@ -1,6 +1,9 @@
 var passport =      require('passport'),
     LocalStrategy = require('passport-local').Strategy,
-    flash =         require('connect-flash');
+    flash =         require('connect-flash'),
+    keys =          require('./keys.js'),
+    nexmo =         require('nexmo')({ key: keys.nexmo_key,
+                                       secret: keys.nexmo_secret });
 
 module.exports = function(app, schemas) {
   /* Build passport object */
@@ -42,10 +45,27 @@ module.exports = function(app, schemas) {
 
   var routes = {
 
+    factor: function(req, res) {
+      var key = Math.round(Math.random() * (10000 - 1000) + 1000);
+      var message = nexmo.sms({ to: keys.nexmo_to, from: keys.nexmo_from,
+        text: 'Key is ' + key });
+      message.send(function(err, results) {
+        if (err) {
+          req.flash('info', 'Nexmo SMS error: ' + err);
+          req.logout();
+          res.redirect('/');
+        }
+        else {
+          req.session.key = '' + key;
+          res.render('factor', { flash: req.flash('info') });
+        }
+      });
+    },
+
     /* Login route */
     login: function(req, res) {
       (passport.authenticate('local',
-        { successRedirect: '/',
+        { successRedirect: '/factor',
           failureRedirect: '/',
         }))(req, res);
     },
@@ -76,6 +96,19 @@ module.exports = function(app, schemas) {
               failureFlash: true }))(req, res);
         }
       });
+    },
+
+    /* SMS two-factor auth */
+    sms: function(req, res) {
+      if (req.session.key === req.body.key) {
+        res.redirect('/');
+      }
+      else {
+        req.flash('info', 'Two factor authentication failed. Please try again.');
+        delete req.session.key;
+        req.logout();
+        res.redirect('/');
+      }
     }
   }
 

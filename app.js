@@ -86,8 +86,7 @@ db.connection.once('open', function() {
     );
   });
 
-  // Login
-  app.get('/login', auth.login);
+  app.get('/factor', auth.factor);
 
   // Logout
   app.get('/logout', auth.logout);
@@ -104,6 +103,9 @@ db.connection.once('open', function() {
 
   // Signup Form
   app.post('/signup', auth.signup);
+
+  // Two Factor Authentication
+  app.post('/sms', auth.sms);
 
   /*
    * Start it up

@@ -9,6 +9,7 @@
     "express3-handlebars": "0.4.x",
     "mongoose": "^3.8.25",
     "mongoose-bcrypt": "^1.1.1",
+    "nexmo": "0.0.7",
     "passport": "^0.2.1",
     "rootpath": "^0.1.2"
   },
