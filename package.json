@@ -1,6 +1,7 @@
 {
-  "name": "spenmo",
-  "version": "0.0.0",
+  "name": "Thesis-Spenmo",
+  "version": "0.0.1",
+  "author": "Collin Stedman",
   "private": true,
   "dependencies": {
     "connect-flash": "^0.1.1",
@@ -38,5 +39,6 @@
   "engines": {
     "node": ">=0.8.0",
     "npm": "1.2.x"
-  }
+  },
+  "license": "Beerware"
 }

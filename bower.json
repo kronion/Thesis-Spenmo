@@ -2,7 +2,8 @@
   "name": "spenmo",
   "version": "0.0.0",
   "dependencies": {
-    "modernizr": "~2.6.2"
+    "modernizr": "~2.6.2",
+    "typeahead.js": "~0.10.5"
   },
   "devDependencies": {}
 }

@@ -1,6 +1,11 @@
 <div class="container">
   {{#if user}}
     <h1>Hello, {{user.firstname}}</h1>
+    <h2>Make a payment</h2>
+    <form method="post" action="/pay">
+      <input type="text" name="user" placeholder="Name or @username">
+      <input type="number" name="units" placeholder="Amount (in Spenmo units)">
+    </form>
   {{else}}
     <form method="post" action="/login">
       <input type="text" name="username" placeholder="Username">
